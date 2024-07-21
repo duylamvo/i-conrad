@@ -1,0 +1,5 @@
+gdown
+pandas
+fire
+dbt-core==1.5.0
+dbt-sqlite==1.5.0

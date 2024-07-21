@@ -1,0 +1,11 @@
+default:
+  target: dev
+  outputs:
+    dev:
+      type: sqlite
+      threads: 1
+      database: "thelook_ecommerce"
+      schema: main
+      schemas_and_paths:
+        main: "data/thelook_ecommerce.db"
+      schema_directory: "data"
