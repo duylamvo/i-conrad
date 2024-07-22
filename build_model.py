@@ -50,6 +50,8 @@ def analyze(model: str):
         ]
     )
 
+    print (f"Model is short demonstrated from table: {METRIC__MODELS[model]}")
+
     # Check the results
     if not result.success:
         raise result.exception

@@ -70,11 +70,16 @@ def load_to_db(
 
 def clean():
     """Clean."""
-    shutil.rmtree(DEFAULT_DATA_DIR)
     files = ["thelook_ecommerce.zip", DEFAULT_DATABASE_FILE]
+
+    for item in os.listdir(DEFAULT_DATA_DIR):
+        f_path = os.path.join(DEFAULT_DATA_DIR, item)
+        files.append(f_path)
+
     for f in files:
         if os.path.isfile(f):
             os.remove(f)
+            print(f"Deleted {f}")
 
 
 def ingest_gdrive(
@@ -96,18 +101,3 @@ def ingest_gdrive(
 
     conn.close()
 
-
-def main():
-    db_file = DEFAULT_DATABASE_FILE
-    conn = sqlite3.connect(db_file)
-
-    # List tables
-    tables = pd.read_sql("SELECT name FROM sqlite_master WHERE type='table'", conn)
-    tables = tables.name.to_list()
-    # ['products', 'orders', 'inventory_items', 'users', 'distribution_centers', 'events', 'order_items']
-    for t in tables:
-        print(f"-----{t}-----")
-        t = "users"
-        df = pd.read_csv(f"data/{t}.csv")
-        print(df.head(10))
-        df.columns

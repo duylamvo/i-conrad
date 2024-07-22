@@ -3,6 +3,7 @@
 import fire
 
 from build_model import build_models
+from build_model import analyze
 from extract_and_load import ingest_gdrive
 from extract_and_load import clean
 
@@ -15,6 +16,7 @@ class MainCommands:
         self.ingest_gdrive = ingest_gdrive
         self.clean = clean
         self.build_models = build_models
+        self.analyze = analyze
 
 
 if __name__ == "__main__":
