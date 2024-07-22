@@ -205,13 +205,13 @@
 
 1. Benefits
 
-- This could create generic and standard to land data to Data Lake
-- Generic and standard can be scaled and automated
-- Can convert Metric Layer to data mesh, and shift to data as a service
+    - This could create generic and standard to land data to Data Lake
+    - Generic and standard can be scaled and automated
+    - Can convert Metric Layer to data mesh, and shift to data as a service
 
 1. Challenges
 
-- Require much effort to implementation Kafka, Monitoring
-- Could increase the cost of storage and processing
-- Manage and orchestration could be decentralized to dags, dbt, and monitoring for kafka. But at moment we do not have a tool can do everything.
-- Reqire more technical skills
+    - Require much effort to implementation Kafka, Monitoring
+    - Could increase the cost of storage and processing
+    - Manage and orchestration could be decentralized to dags, dbt, and monitoring for kafka. But at moment we do not have a tool can do everything.
+    - Reqire more technical skills
